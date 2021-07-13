@@ -21,7 +21,7 @@ Examples below:
 1.  [Download the mod files from the releases page](https://github.com/solimodsthings/FindMod/releases) to your PC
 2.	Open your Himeko Sutori steam folder by right-clicking on the game in Steam and choosing Manage > Browser Local Files.
 3.	Place files <i>EventsMod.u</i> and <i>FindMod.u</i> in folder <b>…/Himeko Sutori/RPGTacGame/Script/</b>
-4.	Open file <b>…/Himeko Sutori/RPGTacGame/Config/RPGTacMods.ini</b> and so the mod is loaded whenever you start the game – the file should look like this:
+4.	Edit file <b>…/Himeko Sutori/RPGTacGame/Config/RPGTacMods.ini</b> so the mod is loaded whenever you start the game – the file should be updated to look something like this:
 
 ```
 [rpgtacgame.RPGTacMutatorLoader]
