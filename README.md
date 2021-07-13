@@ -3,7 +3,7 @@ This is a mod for [Himeko Sutori](https://himekosutori.com/) that lets you do se
 
 Search works against the following: character names, class names (the character's current one), any learned reactions, and any learned passive abilities (eg. Slimologist).
 
-More Classes Mod depends on another Himeko Sutori mod, [Events Mod](https://github.com/solimodsthings/EventsMod).
+Find Mod depends on another Himeko Sutori mod, [Events Mod](https://github.com/solimodsthings/EventsMod).
 
 [![](https://i.imgur.com/q9fFcxU.gif)](https://gfycat.com/unkemptunsungiberianlynx)
 
