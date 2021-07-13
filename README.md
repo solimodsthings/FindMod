@@ -3,6 +3,8 @@ This is a mod for [Himeko Sutori](https://himekosutori.com/) that lets you do se
 
 More Classes Mod depends on another Himeko Sutori mod, [Events Mod](https://github.com/solimodsthings/EventsMod).
 
+![](https://i.imgur.com/q9fFcxU.gif)
+
 # Usage
 While in the lance management screen press ```F1``` or ``` ` ``` to open up the game console. Send commands to the this mod with the following command syntax: ``` TellMod Find <Keyword> ```. You can shorten ``` TellMod ``` to ``` Mod ``` and you also don't need to worry about case sensitivity. 
 
