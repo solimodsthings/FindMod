@@ -9,9 +9,8 @@
 // > TellMod Find Knight 
 // > TellMod Find "Healing Burst" 
 // > TellMod Find Reset
-// 
 
-class FindModListener extends EventListener;
+class FindCommand extends Plugin;
 
 struct PawnHighlight
 {
@@ -37,20 +36,20 @@ function OnReceiveMessage(string Message)
 
         if(Locs(Message) == "clear" || Locs(Message) == "reset")
         {
-            foreach Manager.Army(TargetPawn)
+            foreach Core.Army(TargetPawn)
             {
                 TargetPawn.CheckForLevelUpStar();
                 SetFaded(TargetPawn, false);
 
                 if(TargetPawn.bSquadLeader)
                 {
-                    TargetPawn.SpawnLeaderHeraldry(Manager.CoatOfArms);
+                    TargetPawn.SpawnLeaderHeraldry(Core.CoatOfArms);
                 }
             }
         }
         else
         {
-            foreach Manager.Army(TargetPawn)
+            foreach Core.Army(TargetPawn)
             {
                 TargetPawn.ClearLevelUpStar();
                 TargetPawn.DestroyLeaderHeraldry();
@@ -58,7 +57,7 @@ function OnReceiveMessage(string Message)
                 if(HasMatch(TargetPawn, Message))
                 {
                     SetFaded(TargetPawn, false);
-                    // AddHighlight(TargetPawn); // Will re-enable this once a suitable particle effect is found
+                    // AddHighlight(TargetPawn); // Can re-enable this if a suitable particle effect is found
                 }
                 else
                 {
@@ -85,7 +84,7 @@ function OnCauseEvent(optional Name event)
 
         ClearHighlights();
 
-        foreach Manager.Army(TargetPawn)
+        foreach Core.Army(TargetPawn)
         {
             TargetPawn.bIsBowing = false;
         }
@@ -115,7 +114,7 @@ private function AddHighlight(RPGTacPawn TargetPawn)
     local PawnHighlight Highlight;
 
     Highlight.Character = TargetPawn;
-    Highlight.Particle = Manager.World.MyEmitterPool.SpawnEmitter(
+    Highlight.Particle = Core.World.MyEmitterPool.SpawnEmitter(
         ParticleSystem(DynamicLoadObject(DefaultParticle, class'ParticleSystem')), 
         TargetPawn.Location, 
         TargetPawn.Rotation, 

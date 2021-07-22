@@ -1,7 +1,9 @@
-class FindModStart extends EventMutator;
+//[Find Mod for Himeko Sutori (2021)]
 
-function OnEventManagerCreated(EventManager Manager)
+class FindModStart extends ModStart;
+
+function OnStart(CorePlayerController Core)
 {
-	Manager.AddListener(new class'FindModListener');
+	Core.AddPlugin(new class'FindCommand');
 }
 
